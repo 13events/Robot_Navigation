@@ -5,6 +5,11 @@
 
 
 
+void BoardState::makeBoard()
+{
+	//randomly fill board with 1's and 0's
+}
+
 void BoardState::printBoard()
 {
 

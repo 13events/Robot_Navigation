@@ -16,10 +16,12 @@ public:
 		boardHeight = matrixRows;
 		boardWidth = matrixColumns;
 
-		//randomly fill board with 1's and 0's
+		//makeBoard
+
 		this->printBoard();
 	};
 
+	void makeBoard();
 	void printBoard();
 	~BoardState();
 };
