@@ -10,17 +10,27 @@ class BoardState
 	private:
 		std::vector<std::vector<int>> boardMatrix;
 		int boardHeight, boardWidth;
+		int startPosX, startPosY, goalPosX, goalPosY;
 public:
 	BoardState(int matrixRows, int matrixColumns): boardMatrix(matrixRows, std::vector<int>(matrixColumns))
 	{	
+		srand(time(0));
 		boardHeight = matrixRows;
 		boardWidth = matrixColumns;
 
-		//randomly fill board with 1's and 0's
+		//makeBoard
+		this->makeBoard();
+
 		this->printBoard();
 	};
 
+	bool setStartPos(int x, int y);
+	bool setGoalPos(int x, int y);
+	void makeBoard();
 	void printBoard();
+	int getBoardHeight();
+	int getBoardWidth();
+	std::vector<std::vector<int>> getBoard();
 	~BoardState();
 };
 
